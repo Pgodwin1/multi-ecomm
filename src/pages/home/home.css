@@ -1,0 +1,355 @@
+/* Ensure the sidebar and menu are visible and the links are clickable */
+.alldepartments_menu_wrap {
+    position: relative;
+    /* Ensure it's in the normal flow and not fixed */
+    z-index: 9999;
+    /* Ensure the sidebar is on top of other elements */
+}
+
+.alldepartments_menulist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alldepartments_menulist li {
+    display: block;
+    /* Ensure each list item is displayed properly */
+    margin-bottom: 10px;
+    /* Optional, for spacing between items */
+}
+
+.alldepartments_menulist li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* Remove default underline from links */
+    color: #000;
+    /* Adjust the text color */
+    padding: 10px 15px;
+    background-color: #fff;
+    /* Background color for the links */
+    border-radius: 5px;
+    /* Optional: for rounded corners */
+    transition: background-color 0.3s ease;
+    /* Optional: smooth transition for hover effect */
+}
+
+.alldepartments_menulist li a:hover {
+    background-color: #f0f0f0;
+    /* Light hover effect */
+}
+
+.alldepartments_menulist li a .icon {
+    margin-right: 10px;
+    /* Space between the icon and the link text */
+}
+
+.alldepartments_menulist li a img {
+    max-width: 20px;
+    /* Ensure icons are not too large */
+    height: auto;
+}
+
+.alldepartments_menulist li.has_child {
+    position: relative;
+}
+
+.alldepartments_dropdown {
+    visibility: visible;
+    /* Ensure the dropdown is visible */
+    display: block;
+    /* Make sure the dropdown is not hidden */
+    opacity: 1;
+    /* Make sure it's not invisible */
+}
+
+.alldepartments_dropdown.show_lg {
+    display: block;
+    /* Ensure the dropdown is displayed when needed */
+}
+
+.alldepartments_menulist li a {
+    cursor: pointer;
+    /* Ensure links look clickable */
+}
+
+/* Ensure no other element is blocking the links */
+* {
+    pointer-events: auto;
+    /* Make sure all elements are clickable unless explicitly set otherwise */
+}
+
+/* Optional: Make sure the link's container is high enough and doesn't overlap */
+ul.alldepartments_menulist {
+    position: relative;
+    z-index: 10;
+    /* Ensure this is on top if necessary */
+}
+
+/* Styles for header action buttons */
+.supermarket_header_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 120%;
+    height: 50px;
+    position: relative;
+    z-index: 9999;
+    margin-left: -80px;
+}
+
+.action_btn_group {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.action_btn_group li {
+    margin-right: 15px;
+}
+
+.action_btn_group li:last-child {
+    margin-right: 0;
+}
+
+.action_btn_group li a,
+.action_btn_group li button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action_btn_group li a:hover,
+.action_btn_group li button:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+}
+
+.action_btn_group .cart_btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.action_btn_group .cart_btn .btn_badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+
+/* Container for the search bar */
+.medical_search_bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Aligns search bar to the left */
+    width: 80%;
+    height: 60px;
+    /* Adjust this percentage to control the width */
+    max-width: 400px;
+    /* Optionally, limit the max width */
+    background-color: #f9f9f9;
+    /* Light background for the search bar */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* Style for the input field */
+.medical_search_bar .form_item input[type="search"] {
+    width: 100%;
+    height: 50px;
+    /* Takes up full width within form item */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Submit button */
+.medical_search_bar .submit_btn {
+    margin-left: 10px;
+    height: 50px;
+    /* Space between input and button */
+    padding: 8px 12px;
+    background-color: #007bff;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.medical_search_bar .submit_btn:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* navbars */
+.menu_item_has_child>a,
+.submenu a {
+    position: relative;
+    z-index: 9999;
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9;
+    display: none;
+    /* Ensure submenu hides initially */
+}
+
+.menu_item_has_child:hover .submenu {
+    display: block;
+    /* Display submenu on hover */
+}
+
+/* cart */
+.addtocar_btn {
+    position: relative;
+    z-index: 9999;
+    padding: 8px 16px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #ffc156;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addtocar_btn:hover {
+    background-color: #e0a93d;
+    /* Slightly darker on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.addtocar_btn:active {
+    transform: scale(0.95);
+    /* Add a subtle effect when clicking */
+}
+
+.tooltips {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    /* Adjust width and height to make the heart clickable */
+    height: 40px;
+    background-color: black;
+    position: relative;
+    z-index: 9999;
+    /* Black background for the heart icon */
+    border-radius: 50%;
+    /* Round shape */
+    color: white;
+    /* White heart icon color */
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tooltips:hover {
+    background-color: #333;
+    /* Darker shade on hover */
+}
+
+.tooltips i {
+    font-size: 1.5rem;
+    /* Adjust the size of the heart icon */
+}
+
+.tooltips:active {
+    transform: scale(0.95);
+    /* Add a subtle effect when clicking */
+}
+.car {
+    z-index: 999;
+    position: fixed;
+}
+
+/* cart sidebar */
+
+.cart_sideba {
+    position: fixed;
+    /* Keeps it fixed on the screen */
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    /* Sidebar background */
+    z-index: 1000;
+    /* Ensures it’s on top of other elements */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+    /* Optional shadow for depth */
+    transform: translateX(100%);
+    /* Start off-screen */
+    transition: transform 0.3s ease;
+    /* Smooth slide-in */
+}
+
+.cart_sideba_open {
+    transform: translateX(0);
+    /* Slide into view */
+}
+
+.cart_sideba_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    z-index: 999;
+    /* Just below the sidebar */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cart_sideba_overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Hide and disable interaction */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .medical_search_bar {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}
