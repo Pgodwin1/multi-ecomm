@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Footer from "../compoent/footer";
 import { registerSchema } from "../validate";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
